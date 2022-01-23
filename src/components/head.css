@@ -1,0 +1,20 @@
+.head {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    background-color: #fbfaff;
+    box-shadow: 0px 5px #e1e0e4;
+    margin: 0px 5px 15px 0px;
+    padding: 3px;
+}
+
+.cartBox {
+    display: flex;
+    margin-left: auto;
+    padding-right: 15px;
+}
+
+.cartBox total {
+    margin: 0px;
+}

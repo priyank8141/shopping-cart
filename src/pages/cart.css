@@ -1,0 +1,57 @@
+.cartList {
+    margin: auto;
+    width: 90%;
+    padding: 2px;
+}
+
+.cartCard {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 1100;
+    background-color: #fbfaff;
+    margin: 5px 0px 10px 0px;
+    box-shadow: 0px 3px #e1e0e4;
+    border: 1px solid #e1e0e4;
+    border-radius: 10px;
+}
+
+.img {
+    width: 5px;
+    height: 5px;
+}
+
+.titleDescrption {
+    margin-left: 5px;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.titleDescrption h3 {
+    margin: 2px;
+}
+
+.titleDescrption p {
+    font-size: 15px;
+    margin: 2px;
+}
+
+.counter {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.counter input {
+    width: 15px;
+}
+
+.counter button {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.price {
+    margin: 0px 10px 0px 10px;
+}

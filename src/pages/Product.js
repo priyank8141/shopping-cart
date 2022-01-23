@@ -28,7 +28,12 @@ export default function Product({ addCart, removeCart }) {
                                     </div>
                                     <div className="counter">
                                         <button onClick={() => removeCart(p)}>-</button>
-                                        <input value={0} />
+                                        <p>{JSON.parse(localStorage.getItem('cart')).map((c) => {
+                                            if (c.id === p.id) {
+                                                return c.quantity
+                                            }
+                                        })}</p>
+
                                         <button onClick={() => addCart(p)}>+</button>
                                     </div>
                                     <div className="price">

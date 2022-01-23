@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
 import "./style.css";
 
 export default function App() {
@@ -28,6 +29,10 @@ export default function App() {
     setTotalAmount(amount)
   }, [])
 
+  const setAmountItems = (quantity, price) => {
+    setTotalAmount(totalAmount - parseInt(price))
+    setTotalItems(totalItems - quantity)
+  }
   const addCart = (data) => {
     const cart = JSON.parse(localStorage.getItem('cart'))
     const isOld = JSON.parse(localStorage.getItem('cart')).map((item) => item.id).includes(data.id);
@@ -67,11 +72,11 @@ export default function App() {
           };
         }
       }
-      setTotalItems(totalItems - 1)
-      setTotalAmount(totalAmount - parseInt(data.price))
       return item;
     });
     isSingleQuant && localStorage.setItem('cart', JSON.stringify([...items]));
+    setTotalItems(totalItems - 1)
+    setTotalAmount(totalAmount - parseInt(data.price))
   };
 
   return (
@@ -84,12 +89,13 @@ export default function App() {
       />
       {iscartOpen && (
         <>
-          <h3>cart is open</h3>{" "}
+          {/* <h3>cart is open</h3>{" "}
           {JSON.parse(localStorage.getItem('cart')).map((c) => (
             <p>
               {c.title},{c.quantity}
             </p>
-          ))}
+          ))} */}
+          <Cart setAmountItems={setAmountItems} />
         </>
       )}
       {!iscartOpen && <Product addCart={addCart} removeCart={removeCart} />}

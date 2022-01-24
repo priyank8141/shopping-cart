@@ -89,16 +89,10 @@ export default function App() {
       />
       {iscartOpen && (
         <>
-          {/* <h3>cart is open</h3>{" "}
-          {JSON.parse(localStorage.getItem('cart')).map((c) => (
-            <p>
-              {c.title},{c.quantity}
-            </p>
-          ))} */}
           <Cart setAmountItems={setAmountItems} />
         </>
       )}
-      {!iscartOpen && <Product addCart={addCart} removeCart={removeCart} />}
+      <Product addCart={addCart} removeCart={removeCart} />
     </div>
   );
 }

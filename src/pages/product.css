@@ -7,13 +7,15 @@
 .productcard {
     padding: 5px;
     display: flex;
+    justify-content: center;
     align-items: center;
     z-index: 1100;
     background-color: #fbfaff;
-    margin: 5px 0px 10px 0px;
-    box-shadow: 0px 3px #e1e0e4;
+    box-shadow: 0px 3px #FFA500;
     border: 1px solid #e1e0e4;
     border-radius: 10px;
+    width: 75%;
+    margin: 1% auto;
 }
 
 .img {

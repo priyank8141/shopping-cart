@@ -1,6 +1,19 @@
+.cart {
+    display: block;
+    margin-left: 5px;
+    z-index: 1;
+    width: 35%;
+    max-height: 55%;
+    background-color: #fab83e;
+    border: 2px solid #FFA500;
+    overflow: auto;
+    position: fixed;
+    right: 20px;
+    border-radius: 10px;
+}
+
 .cartList {
-    margin: auto;
-    width: 90%;
+    width: 95%;
     padding: 2px;
 }
 
@@ -9,16 +22,14 @@
     display: flex;
     align-items: center;
     z-index: 1100;
-    background-color: #fbfaff;
-    margin: 5px 0px 10px 0px;
-    box-shadow: 0px 3px #e1e0e4;
-    border: 1px solid #e1e0e4;
-    border-radius: 10px;
+    width: 95%;
+    margin: 3% auto;
 }
 
 .img {
-    width: 5px;
-    height: 5px;
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
 }
 
 .titleDescrption {
@@ -26,6 +37,7 @@
     text-align: left;
     padding-left: 5px;
     padding-right: 5px;
+    width: 55%;
 }
 
 .titleDescrption h3 {
@@ -34,22 +46,11 @@
 
 .titleDescrption p {
     font-size: 15px;
-    margin: 2px;
+    margin: 5px;
 }
 
-.counter {
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.counter input {
-    width: 15px;
-}
-
-.counter button {
-    margin-left: 3px;
-    margin-right: 3px;
+.closeButton {
+    margin: 5px;
 }
 
 .price {

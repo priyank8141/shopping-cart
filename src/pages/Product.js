@@ -4,6 +4,7 @@ import { getProducts } from "../api";
 import "./product.css";
 
 export default function Product({ addCart, removeCart }) {
+    const image = "../shared/images"
     const [productList, setProuctList] = useState();
     useEffect(() => {
         async function fetchData() {
@@ -21,7 +22,7 @@ export default function Product({ addCart, removeCart }) {
                         return (
                             <>
                                 <div className="productcard">
-                                    <img src={p.image} alt="demo" />
+                                    <img className="img" src={require(`../shared/images${p.image}`)} alt="demo" height="90" width="90" />
                                     <div className="titleDescrption">
                                         <h3>{p.title}</h3>
                                         <p>{p.desc}</p>

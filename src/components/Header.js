@@ -11,15 +11,16 @@ export default function Header({
         <div className="head">
             <h1>Shopping Cart</h1>
             <div className="cartBox">
-
-                <button
-                    onClick={() => {
-                        setIsCartOpen(!iscartOpen);
-                    }}
-                >
-                    <p>$ {totalAmount}</p>
-                    <p>{totalItems} Items</p>
-                </button>
+                <p>$ {totalAmount}</p>
+                <div onClick={() => {
+                    setIsCartOpen(!iscartOpen);
+                }}>
+                    <img className="cartImg" src={require('../shared/images/cart.png')} alt="cart" width={50} height={50} />
+                    {totalItems ? (
+                        <span className="cart-count">{totalItems}</span>
+                    ) : (
+                        ""
+                    )}</div>
             </div>
         </div>
     );

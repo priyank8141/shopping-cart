@@ -17,13 +17,13 @@ export default function Cart({ setAmountItems }) {
     }
 
     return (
-        <div className="product">
+        <div className="cart">
             <div className="cartList">
                 {JSON.parse(localStorage.getItem('cart')).map((p) => {
                     return (
                         <>
                             <div className="cartCard">
-                                <button onClick={() => { removeFromCart(p) }}>x</button>
+                                <img className="img" src={require(`../shared/images${p.image}`)} alt="demo" height={60} width={60} />
                                 <div className="titleDescrption">
                                     <h3>{p.title}</h3>
                                     <p>{p.currency} {p.price}</p>
@@ -32,7 +32,11 @@ export default function Cart({ setAmountItems }) {
                                     <p>
                                         Qty {p.quantity}
                                     </p>
+                                    <p>
+                                        {p.currency} {p.quantity * p.price}
+                                    </p>
                                 </div>
+                                <button className="closeButton" onClick={() => { removeFromCart(p) }}>x</button>
                             </div>
                         </>
                     );
